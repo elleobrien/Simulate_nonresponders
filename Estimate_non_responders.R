@@ -1,12 +1,18 @@
 #### Exploring test-retest reliability and noise #####
 library(ggplot2)
 rm(list = ls())
-# Assume scores are truly zero. what noise is necessary to make a test-retest reliability of 0.91?
+# Assume scores are truly zero. what noise is necessary to make a test-retest reliability of 0.91? Or 0.98?
 # some algebra from the formula reliability^2 = 1 - sigma_error^2 / sigma_obs^2
 sigma_obs = 15
 reliability_est = 0.98
 sigma_error = sqrt(-sigma_obs^2 * (reliability_est^2 - 1))
 print(sigma_error)
+
+#### Some numbers based on the standardized reading tests (WJ-BRS)
+# Pop mean is 100
+# Pop SD is 15
+# 92 is upper bound on the bottom 30th percentile
+##############################################
 
 ##################### RUN SOME SIMULATIONS #############################################
 #################### HOW MANY PARTICIPANTS WOULD SHOW NO POSITIVE GROWTH WHATSOEVER #####
